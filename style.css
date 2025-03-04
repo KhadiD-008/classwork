@@ -1,0 +1,24 @@
+nav{
+    width: 50%;
+    display: flex;
+    flex-flow: raw nowrap;
+    justify-content: space-around;
+}
+a:hover{
+    background-color: burlywood;
+    color: brown;
+    border: 2px solid black;
+    cursor: pointer;
+}
+a:link{
+    text-decoration: none;
+}
+img{
+    inline-size: 10%;
+}
+#me{
+    margin-left: 50%;
+}
+#contacts{
+    margin-left: 40%;
+}
