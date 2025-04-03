@@ -27,8 +27,9 @@ console.log (personAge)
         console.log(a || i);
     } */
 
- let width = prompt ("Длина")
+ /* let width = prompt ("Длина")
  let height = prompt ("Ширина")
+
       //1)
  function S () {
     let s = width * height
@@ -36,9 +37,18 @@ console.log (personAge)
  }
  S()
       //2)
- /* function s (width, height) {
+  function s (width, height) {
     console.log (width * height)
  }
  s (width, height) или s (promt(), promt()) */
 
-
+ //массив array
+ let array1 = [0, 1, 2, 3, 4, 5]
+ function a(array) {
+       let result = 0
+       for (let i=0; i < array.length; i++) {
+        result += array[i]
+       }
+       console.log (result)
+ }
+  a(array1)
