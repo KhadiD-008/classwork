@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Avenir-Light";
+    src: url('FontsFree-Net-Avenir-Light\.ttf');
+  }
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url('FontsFree-Net-Montserrat-Bold-2\.ttf');
+  }
+  header{
+      display: flex;
+      flex-flow: raw wrap;
+      justify-content: space-evenly;
+      background-color: rgba(2, 48, 71, 0.8);
+      color: #DFF5FF;
+      position: fixed;
+      margin-bottom: 10px;
+  }
+  h1{
+    font-family: "Montserrat-Bold";
+  }
+  main{
+      background-color: #FFFCF3;
+      color: #023047;
+      
+  }
+  footer{
+      background-color: #023047;
+      color: #DFF5FF;
+  }
+  .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .logo{
+      width: 70px;
+    }
+    .burger{
+      background-color: rgba(2, 48, 71, 0);
+      border: none;
+    }
