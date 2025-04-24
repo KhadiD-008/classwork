@@ -43,7 +43,7 @@ console.log (personAge)
  s (width, height) или s (promt(), promt()) */
 
  //массив array
- let array1 = [0, 1, 2, 3, 4, 5]
+ /* let array1 = [0, 1, 2, 3, 4, 5]
  function a(array) {
        let result = 0
        for (let i=0; i < array.length; i++) {
@@ -51,4 +51,31 @@ console.log (personAge)
        }
        console.log (result)
  }
-  a(array1)
+  a(array1) */
+
+
+
+
+ /* function findPolyndrom(string) {
+    let a = 0
+    for(let i = 0; i <= string.length; i++)
+        if(string[i] = a) {
+            
+        }
+
+  }
+findPolyndrom('таксикат') */
+
+//let col = prompt("write below")
+/* let obj = {
+    name: "Khadizha",
+    age: 20,
+}
+//console.log(obj[col]) 
+
+let obj1 = null
+for (key in obj) {
+    obj1.key = obj[key]   
+} */
+
+    
