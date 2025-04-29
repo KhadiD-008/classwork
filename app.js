@@ -1,5 +1,9 @@
 
 
+
+
+
+
 /*alert("hello world!")
 confirm("Yes or no?")
 let personAge = prompt("Age")
@@ -78,4 +82,9 @@ for (key in obj) {
     obj1.key = obj[key]   
 } */
 
+function person(name, hobbies, personHobbies) {
+    let line = 'your hobbies are:'
     
+}
+person('Khadizha', ['robotics', 'coding', 'business'], function(name, line, hobbies))
+console.log (person)

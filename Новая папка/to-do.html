@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button> add </button>
+    <ul>
+
+    </ul>
+    <script>
+        let btn = document.querySelector('button')
+        let task = document.querySelector('input')
+        let tasklList = document.querySelector('ul')
+
+        btn.addEventListener('click', () => {
+            let li = document.createElement('li')
+            let delet = document.createElement ('button')
+            delet.textContent = 'delete'
+            li.append(task.value, delet)
+            tasklList.append(li)
+            delet.addEventListener('click', () => {
+                li.remove()
+            })
+            task.value = ''
+        })
+    </script>
+</body>
+</html>
