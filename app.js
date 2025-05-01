@@ -1,9 +1,4 @@
 
-
-
-
-
-
 /*alert("hello world!")
 confirm("Yes or no?")
 let personAge = prompt("Age")
@@ -82,9 +77,24 @@ for (key in obj) {
     obj1.key = obj[key]   
 } */
 
-function person(name, hobbies, personHobbies) {
-    let line = 'your hobbies are:'
+// function person(name, hobbies, personHobbies) {
+//     let line = 'your hobbies are:'
     
-}
-person('Khadizha', ['robotics', 'coding', 'business'], function(name, line, hobbies))
-console.log (person)
+// }
+// person('Khadizha', ['robotics', 'coding', 'business'], function(name, line, hobbies))
+// console.log (person)
+
+// let b = 2   
+// console.log(b)
+// setTimeout(() => console.log(b), 2000)
+// console.log('end')
+
+// let promise = new Promise(res => {
+//     setTimeout(() => console.log('b'), 3000)
+    
+// }) 
+
+// fetch('https://jsonplaceholder.typicode.com/users/10')
+//       .then(response => response.json())
+//       .then(json => console.log(json))
+
