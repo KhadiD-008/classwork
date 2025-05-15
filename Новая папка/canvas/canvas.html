@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can"></canvas>
+    <script>
+        function draw() {
+            let canvas = document.getElementById('can')
+            let ctx = canvas.getContext('2d')
+
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
+
+            let isDrawing = false
+            let lastX = 0
+            let lastY = 0
+
+            ctx.strokeStyle = 'yellow'
+            ctx.lineWidth = 10
+            ctx.lineCap = 'round'
+
+            canvas.addEventListener('mousedown', (e) => {
+                isDrawing = true
+                lastX = e.offsetX
+                lastY = e.offsetY
+                console.log(e);
+                
+            })
+            canvas.addEventListener('mouseup', (e) => {
+                isDrawing = false
+            })
+            canvas.addEventListener('mouseout', (e) => {
+                isDrawing = false
+            })
+            canvas.addEventListener('mousemove', (e) => {
+                if(!isDrawing) return
+
+                ctx.beginPath()
+                ctx.moveTo(lastX, lastY)
+
+                ctx.lineTo(e.offsetX, e.offsetY)
+                ctx.stroke()
+
+                lastX = e.offsetX
+                lastY = e.offsetY
+            })
+
+        }
+        draw()
+
+    </script>
+</body>
+</html>
