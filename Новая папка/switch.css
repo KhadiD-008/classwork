@@ -6,3 +6,36 @@
     color: blue;
     background-color: red;
 }*/
+#main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    border-color: rgb(20, 109, 181);
+    border-style: solid;
+    margin: 5%;
+}
+
+ul {
+    background-color: rgb(107, 152, 188);
+    padding: 5%;
+    margin: 5%;
+    border-style: solid;
+    border-color: rgb(20, 109, 181);
+
+    
+}
+
+li {
+    list-style: none;
+    color: rgb(19, 79, 91);
+}
+
+#text {
+    padding: 5%;
+    margin: 5%;
+}
+
+li:hover {
+    background-color: rgb(199, 219, 235);
+}
+

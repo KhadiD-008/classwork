@@ -34,6 +34,8 @@ console.log (personAge)
     let s = width * height
     console.log (s)
  }
+
+ 
  S()
       //2)
   function s (width, height) {
@@ -98,3 +100,15 @@ for (key in obj) {
 //       .then(response => response.json())
 //       .then(json => console.log(json))
 
+const numbers = [5, 2, 2, 3, 4, 4, 5];
+let result = [];
+numbers.forEach(elemFromNumbers => {
+    // let isThere = result.find ((elementFromResult) => {
+    //     return elemFromNumbers
+    // })
+    if(!result.includes(elemFromNumbers)) {
+        result.push(elemFromNumbers)
+    }
+    // if(!isThere) result.push(isThere)
+})
+console.log(result);
