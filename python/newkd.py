@@ -109,94 +109,126 @@
 #        value = input('Введите сумму: ')
 #        walletBalance(value)
 
-def get_balance():
-    try:
-        with open('wallet.txt', 'r') as f:
-            return float(f.read().strip() or 0)
-    except FileNotFoundError:
-        return 0
+
+
+
+#---------
+
+# def get_balance():
+#     try:
+#         with open('wallet.txt', 'r') as f:
+#             return float(f.read().strip() or 0)
+#     except FileNotFoundError:
+#         return 0
     
-def update_balance(amount):
-    balance = get_balance() + amount
-    with open('wallet.txt', 'w') as f:
-        f.write(str(balance))
-    return balance
+# def update_balance(amount):
+#     balance = get_balance() + amount
+#     with open('wallet.txt', 'w') as f:
+#         f.write(str(balance))
+#     return balance
 
-def show_goods():
-    goods = {
-    '1': ('Бананы', 50),
-    '2': ('Яблоки', 30),
-    '3': ('Гранаты', 80),
-    '4': ('Ананасы', 100),
-    }
+# def show_goods():
+#     goods = {
+#     '1': ('Бананы', 50),
+#     '2': ('Яблоки', 30),
+#     '3': ('Гранаты', 80),
+#     '4': ('Ананасы', 100),
+#     }
 
-    while True:
-        print('\n=== МЕНЮ ТОВАРОВ ===')
-        choice = input(
-            '1. Бананы - 50 руб\n'
-            '2. Яблоки - 30 руб\n'
-            '3. Гранаты - 80 руб\n'
-            '4. Ананасы - 100 руб\n'
-            '5. Назад\n'
-        )
+#     while True:
+#         print('\n=== МЕНЮ ТОВАРОВ ===')
+#         choice = input(
+#             '1. Бананы - 50 руб\n'
+#             '2. Яблоки - 30 руб\n'
+#             '3. Гранаты - 80 руб\n'
+#             '4. Ананасы - 100 руб\n'
+#             '5. Назад\n'
+#         )
         
-        choices = choice.split()
-        if not choices:
-            continue
+#         choices = choice.split()
+#         if not choices:
+#             continue
 
-        main_choice = choices[0]
+#         main_choice = choices[0]
 
-        if main_choice == '5':
-            return
+#         if main_choice == '5':
+#             return
         
-        if main_choice in goods:
-            item_name, item_price = goods[main_choice]
-            balance = get_balance()
+#         if main_choice in goods:
+#             item_name, item_price = goods[main_choice]
+#             balance = get_balance()
 
-            if balance >= item_price:
-                quantity = 1
-                if len(choices) > 1 and choices[1].isdigit():
-                    quantity = int(choices[1])
+#             if balance >= item_price:
+#                 quantity = 1
+#                 if len(choices) > 1 and choices[1].isdigit():
+#                     quantity = int(choices[1])
 
-                total_cost = item_price * quantity
+#                 total_cost = item_price * quantity
 
-                if balance >= total_cost:
-                    update_balance(-total_cost)
-                    print(f'Куплено {quantity} {item_name} за {total_cost} руб!')
-                    print(f'Остаток на балансе: {get_balance()} руб')
-                else:
-                    print('\nНедостаточно средств для покупки такого количества')
-            else:
-                print('\nНедостаточно средств!')
+#                 if balance >= total_cost:
+#                     update_balance(-total_cost)
+#                     print(f'Куплено {quantity} {item_name} за {total_cost} руб!')
+#                     print(f'Остаток на балансе: {get_balance()} руб')
+#                 else:
+#                     print('\nНедостаточно средств для покупки такого количества')
+#             else:
+#                 print('\nНедостаточно средств!')
+#         else:
+#             print('\nНекорректный выбор. Попробуйте снова')
+
+# while True:
+#     print(f'\nТекущий баланс: {get_balance()} руб')
+#     choice = input(
+#         '\n1. Пополнить баланс\n'
+#         '2. Посмотреть баланс\n'
+#         '3. Снять деньги\n'
+#         '4. Показать товары\n'
+#         '5. Выйти\n'
+#         '>'
+#     )
+#     if choice == '1':
+#         amount = float(input('Сколько внести? '))
+#         update_balance(amount)
+#         print(f'Баланс пополнен на {amount} руб!')
+#     elif choice == '2':
+#         print(f'\nТекущий баланс: {get_balance()} руб')
+#     elif choice == '3':
+#         amount = float(input('Сколько снять? '))
+#         if get_balance() >= amount:
+#            update_balance(-amount)
+#            print(f'Снято {amount} руб!')
+#         else:
+#             print('Недостаточно средств!')
+#     elif choice == '4':
+#         show_goods()
+        
+#     elif choice == '5':
+#         print('Выход из программы')
+#         break
+
+#---------
+
+# 1. С помощью инпута получить значения: Имя пользователя, возраст, увлечения
+# 2. Создать класс, из которого можно создавать объект на основе введенных данных
+# 3. Реализовать метод класса, который будет выводить строку с описанием увлечения пользователя
+
+userName = input("name: ")
+userAge = input("age: ")
+userHobby = input("hobby: ")
+class UserData:
+    def __init__(self, name, age, hobby):
+        self.userName = name
+        self.userAge = age
+        self.userHobby = hobby
+    def print_hobby(self):
+        hobbies = self.userHobby.split(',')
+        hobbies = [h.strip() for h in hobbies]
+
+        if len(hobbies) == 1:
+            print(f"{self.userName} увлекается: {hobbies[0]}")
         else:
-            print('\nНекорректный выбор. Попробуйте снова')
+            formatted_hobbies = ", ".join(hobbies[0:-1]) + " и " + hobbies[-1]
+            print(f"{self.userName} увлекается: {formatted_hobbies}")
 
-while True:
-    print(f'\nТекущий баланс: {get_balance()} руб')
-    choice = input(
-        '\n1. Пополнить баланс\n'
-        '2. Посмотреть баланс\n'
-        '3. Снять деньги\n'
-        '4. Показать товары\n'
-        '5. Выйти\n'
-        '>'
-    )
-    if choice == '1':
-        amount = float(input('Сколько внести? '))
-        update_balance(amount)
-        print(f'Баланс пополнен на {amount} руб!')
-    elif choice == '2':
-        print(f'\nТекущий баланс: {get_balance()} руб')
-    elif choice == '3':
-        amount = float(input('Сколько снять? '))
-        if get_balance() >= amount:
-           update_balance(-amount)
-           print(f'Снято {amount} руб!')
-        else:
-            print('Недостаточно средств!')
-    elif choice == '4':
-        show_goods()
-        
-    elif choice == '5':
-        print('Выход из программы')
-        break
+user = UserData(userName, userAge, userHobby)
+user.print_hobby()
