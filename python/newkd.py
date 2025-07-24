@@ -212,23 +212,106 @@
 # 2. Создать класс, из которого можно создавать объект на основе введенных данных
 # 3. Реализовать метод класса, который будет выводить строку с описанием увлечения пользователя
 
-userName = input("name: ")
-userAge = input("age: ")
-userHobby = input("hobby: ")
-class UserData:
-    def __init__(self, name, age, hobby):
-        self.userName = name
-        self.userAge = age
-        self.userHobby = hobby
-    def print_hobby(self):
-        hobbies = self.userHobby.split(',')
-        hobbies = [h.strip() for h in hobbies]
+# userName = input("name: ")
+# userAge = input("age: ")
+# userHobby = input("hobby: ")
+# class UserData:
+#     def __init__(self, name, age, hobby):
+#         self.userName = name
+#         self.userAge = age
+#         self.userHobby = hobby
+#     def print_hobby(self):
+#         hobbies = self.userHobby.split(',')
+#         hobbies = [h.strip() for h in hobbies]
 
-        if len(hobbies) == 1:
-            print(f"{self.userName} увлекается: {hobbies[0]}")
-        else:
-            formatted_hobbies = ", ".join(hobbies[0:-1]) + " и " + hobbies[-1]
-            print(f"{self.userName} увлекается: {formatted_hobbies}")
+#         if len(hobbies) == 1:
+#             print(f"{self.userName} увлекается: {hobbies[0]}")
+#         else:
+#             formatted_hobbies = ", ".join(hobbies[0:-1]) + " и " + hobbies[-1]
+#             print(f"{self.userName} увлекается: {formatted_hobbies}")
 
-user = UserData(userName, userAge, userHobby)
-user.print_hobby()
+# user = UserData(userName, userAge, userHobby)
+# user.print_hobby()
+
+#---------
+
+# 1. Создать класс Book
+# Атрибуты: title, author, is_borrowed
+# is_borrowed имеет значение по умолчанию False (книга не взята)
+# Методы: borrow() - взять книгу (если она доступна)
+# return_book() - вернуть книгу
+
+# 2. Создать класс Library
+# Атрибуты: 
+#    -- name (название библиотеки)
+#    -- books (список книг)
+# Методы:
+#    -- add_book(book) - добваить книгу в бибилиотеку
+#    -- borrow_book(book) - взять книгу по названию
+#    -- return_book(book) - вернуть книгу
+#    -- list_books() - вывести список книг
+
+
+class Book:
+    def __init__(self, title, author, is_borrowed = False):
+        self.title = title
+        self.author = author
+        self.is_borrowed = is_borrowed
+
+    def borrow(self):
+        if self.is_borrowed:
+            return False
+        self.is_borrowed = True
+        return True
+    
+    def return_book(self):
+        if not self.is_borrowed:
+            return False
+        self.is_borrowed = False
+        return True
+    
+class Library:
+    def __init__(self, name):
+        self.name = name
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def borrow_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                return True
+            return False
+        return False
+    
+    def return_book(self):
+        for book in self.books:
+            if book.title == title:
+                if book.return_book():
+                    return True
+                return False
+        return False
+    
+    def list_books(self):
+        print(f'Books in {self.name}:')
+        for book in self.books:
+            status = 'borrowed' if book.is_borrowed else 'Available'
+            print(f"- '{book.title}' by {book.author} ({status})")
+
+book1 = Book('1984', 'George Orwell')
+book2 = Book('The Hobbit', 'J.R.R. Tolkien')
+library = Library('Central Library')
+
+library.add_book(book1)
+library.add_book(book2)
+
+library.borrow_book('1984')
+library.borrow_book('1984')
+
+library.return_book('1984')
+library.return_book('1984')
+
+library.list_books()
+
+#---------
