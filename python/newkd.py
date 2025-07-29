@@ -1,5 +1,7 @@
 
 
+
+
 # Множества
 # l = list((1, 2, 2, 3, 3, 4))
 # s = set(l)
@@ -252,66 +254,124 @@
 #    -- list_books() - вывести список книг
 
 
-class Book:
-    def __init__(self, title, author, is_borrowed = False):
-        self.title = title
-        self.author = author
-        self.is_borrowed = is_borrowed
+# class Book:
+#     def __init__(self, title, author, is_borrowed = False):
+#         self.title = title
+#         self.author = author
+#         self.is_borrowed = is_borrowed
 
-    def borrow(self):
-        if self.is_borrowed:
-            return False
-        self.is_borrowed = True
-        return True
+#     def borrow(self):
+#         if self.is_borrowed:
+#             return False
+#         self.is_borrowed = True
+#         return True
     
-    def return_book(self):
-        if not self.is_borrowed:
-            return False
-        self.is_borrowed = False
-        return True
+#     def return_book(self):
+#         if not self.is_borrowed:
+#             return False
+#         self.is_borrowed = False
+#         return True
     
-class Library:
-    def __init__(self, name):
-        self.name = name
-        self.books = []
+# class Library:
+#     def __init__(self, name):
+#         self.name = name
+#         self.books = []
 
-    def add_book(self, book):
-        self.books.append(book)
+#     def add_book(self, book):
+#         self.books.append(book)
 
-    def borrow_book(self, title):
-        for book in self.books:
-            if book.title == title:
-                return True
-            return False
-        return False
+#     def borrow_book(self, title):
+#         for book in self.books:
+#             if book.title == title:
+#                 return True
+#             return False
+#         return False
     
-    def return_book(self):
-        for book in self.books:
-            if book.title == title:
-                if book.return_book():
-                    return True
-                return False
-        return False
+#     def return_book(self):
+#         for book in self.books:
+#             if book.title == title:
+#                 if book.return_book():
+#                     return True
+#                 return False
+#         return False
     
-    def list_books(self):
-        print(f'Books in {self.name}:')
-        for book in self.books:
-            status = 'borrowed' if book.is_borrowed else 'Available'
-            print(f"- '{book.title}' by {book.author} ({status})")
+#     def list_books(self):
+#         print(f'Books in {self.name}:')
+#         for book in self.books:
+#             status = 'borrowed' if book.is_borrowed else 'Available'
+#             print(f"- '{book.title}' by {book.author} ({status})")
 
-book1 = Book('1984', 'George Orwell')
-book2 = Book('The Hobbit', 'J.R.R. Tolkien')
-library = Library('Central Library')
+# book1 = Book('1984', 'George Orwell')
+# book2 = Book('The Hobbit', 'J.R.R. Tolkien')
+# library = Library('Central Library')
 
-library.add_book(book1)
-library.add_book(book2)
+# library.add_book(book1)
+# library.add_book(book2)
 
-library.borrow_book('1984')
-library.borrow_book('1984')
+# library.borrow_book('1984')
+# library.borrow_book('1984')
 
-library.return_book('1984')
-library.return_book('1984')
+# library.return_book('1984')
+# library.return_book('1984')
 
-library.list_books()
+# library.list_books()
+
+#---------
+
+# class Vehicle:
+#     pass
+# class LandVehicle(Vehicle):
+#     pass
+# class TrackedVehicle(LandVehicle):
+#     pass
+
+# b = Vehicle()
+
+# print(issubclass(TrackedVehicle, Vehicle))
+# print(isinstance(b, Vehicle))
+
+# 1. Создать суперкласс для организации. 
+# Создать переменную (свойство), которая хранит количество сотрудников организации
+# 2. Создать подкласс данного суперкласса (Отдел, Сотрудник). 
+# Написать метод, который будет выводить имя сотрудника и количество сотрудников в терминале (принт). 
+# Создать сотрудника из этой организации (из подкласса) и протестировать вывод.
+
+# class Organization:
+#     def __init__(self, number):
+#         self.number = number
+
+# class Employee(Organization):
+#     def __init__(self, name):
+#         self.name = name
+#         super().__init__(100)
+
+#     def ShowInfo(self):
+#         print(f"{self.name} работает в организации с {self.number} сотрудниками")
+    
+# empl = Employee('James')
+# empl.ShowInfo()
+
+# 1. К уже созданному классу "Человек" добавьте статитечский метод (вызывается не через экземпляр, а через имя класса), 
+# который возвращает количество созданных объектов класса "Человек".
+
+# class Human:
+#     count = 0
+#     def __init__(self, name,):
+#         self.name = name
+#         Human.count += 1
+
+#     @staticmethod
+#     def printNumber():
+#         print(f'Количество объектов класса: {Human.count}')
+
+# obj = Human("Lara")
+# obj = Human("Lara")
+# Human.printNumber()
+
+# 2. Создайте класс для подсчета геометрических фигур. 
+# Класс должен предоставлять функциональность для подсчета площади треугольника по разным формулам, площади прямоугольника площади квадрата, площади ромба. 
+# Методы класса для подсчета площади должны быть реализваны с помощью статических методов. 
+# Также класс должен считать количество подсчетов площади и возвращать это значение с помощью статистического метода.
+
 
 #---------
