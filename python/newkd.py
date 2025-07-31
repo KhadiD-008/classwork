@@ -372,6 +372,137 @@
 # Класс должен предоставлять функциональность для подсчета площади треугольника по разным формулам, площади прямоугольника площади квадрата, площади ромба. 
 # Методы класса для подсчета площади должны быть реализваны с помощью статических методов. 
 # Также класс должен считать количество подсчетов площади и возвращать это значение с помощью статистического метода.
+# НЕ ВЫПОЛНЕНО
 
+#---------
+
+# 1.
+# class Human:
+#     def __init__(self):
+#         self.__name = ''
+#         self.__birthdate = ''
+#         self.__phoneNumber = ''
+#         self.__city = ''
+#         self.__country = ''
+#         self.__homeAdress = ''
+
+#     def getInfo(self):
+#         self.__name = input('Введите имя: ')
+#         self.__birthdate = input('Введите дату рождения: ')
+#         self.__phoneNumber = input('Введите номер телефона: ')
+#         self.__city = input('Введите город: ')
+#         self.__country = input('Введите страну: ')
+#         self.__homeAdress = input('Введите домашний адрес: ')
+
+#     def showInfo(self):
+#         print(f'{self.__name} родилась {self.__birthdate}, номер телефона: {self.__phoneNumber}, место жительства: {self.__city}, {self.__country}, {self.__homeAdress}')
+
+# person = Human()
+# person.getInfo()
+# person.showInfo()
+
+# 2.
+# class City:
+#     def __init__(self):
+#         self.__name = ''
+#         self.__region = ''
+#         self.__country = ''
+#         self.__lives = ''
+#         self.__index = ''
+#         self.__phoneNumber = ''
+
+#     def getInfo(self):
+#         self.__name = input('Введите название города: ')
+#         self.__region = input('Введите название региона: ')
+#         self.__country = input('Введите название страны: ')
+#         self.__lives = input('Введите количество жителей в городе: ')
+#         self.__index = input('Введите почтовый индекс: ')
+#         self.__phoneNumber = input('Введите телефонный код города: ')
+
+#     def chooseInfo(self):
+#         print('Какая информация вас интересует?\n1. Название города\n2. Полная информация\n3. Количество жителей')
+#         self.four = input('Выберите пункт: ')
+
+#     def showInfo(self):
+#         if self.four == '1':
+#             print(f'\nГород: {self.__name}')
+#         elif self.four == '2':
+#             print(f'\n Город: {self.__name}\n Регион: {self.__region}\n страна: {self.__country}\n Количество жителей: {self.__lives}\n Почтовый индекс: {self.__index}\n Телефонный код города: {self.__phoneNumber} ')
+#         else:
+#             print(f'\nКоличество жителей: {self.__lives}')
+
+# place = City()
+# place.getInfo()
+# place.chooseInfo()
+# place.showInfo()
+
+# 3.
+# class Country:
+#     def __init__(self):
+#         self.__name = ''
+#         self.__continent = ''
+#         self.__lives = ''
+#         self.__phoneNumber = ''
+#         self.__capital = ''
+#         self.__cities = ''
+
+#     def getInfo(self):
+#         self.__name = input('Введите название страны: ')
+#         self.__continent = input('Введите название континента: ')
+#         self.__lives = input('Введите количество жителей в стране: ')
+#         self.__phoneNumber = input('Введите телефонный код страны: ')
+#         self.__capital = input('Введите столицу: ')
+#         self.__cities = input('Введите названия городов: ')
+
+#     def chooseInfo(self):
+#         print('Какая информация вас интересует?\n1. Название страны\n2. Полная информация\n3. Количество жителей')
+#         self.four = input('Выберите пункт: ')
+
+#     def showInfo(self):
+#         if self.four == '1':
+#             print(f'\nСтрана: {self.__name}')
+#         elif self.four == '2':
+#             print(f'\n Страна: {self.__name}\n Континент: {self.__continent}\n Количество жителей: {self.__lives}\n Телефонный код страны: {self.__phoneNumber}\n Столица: {self.__capital}\n Города: {self.__cities} ')
+#         else:
+#             print(f'\nКоличество жителей: {self.__lives}')
+
+# somewhere = Country()
+# somewhere.getInfo()
+# somewhere.chooseInfo()
+# somewhere.showInfo()
+
+# 4.
+# class Fraction:
+#     def __init__(self):
+#         self.__numerator = int
+#         self.__denominator = int
+
+#     def getInfo(self):
+#         self.__numerator = int(input('Введите первое значение: '))
+#         self.__denominator = int(input('Введите второе значение: '))
+
+
+#     def chooseOperation(self):
+#         print('Выберите операцию:\n 1. Сложение\n 2. Вычитание\n 3. Умножение\n 4. Деление')
+#         self.__operation = input('Выберите пункт: ')
+    
+#     def showResult(self):
+#         if self.__operation == '1':
+#             self.__result = self.__numerator + self.__denominator
+#             print(f'\n Результат сложения {self.__numerator} и {self.__denominator}: {self.__result}')
+#         elif self.__operation == '2':
+#             self.__result = self.__numerator - self.__denominator
+#             print(f'\n Результат вычитания {self.__numerator} и {self.__denominator}: {self.__result}')
+#         elif self.__operation == '3':
+#             self.__result = self.__numerator * self.__denominator
+#             print(f'\n Результат умножения {self.__numerator} и {self.__denominator}: {self.__result}')
+#         else:
+#             self.__result = self.__numerator / self.__denominator
+#             print(f'\n Результат деления {self.__numerator} и {self.__denominator}: {self.__result}')
+
+# operation = Fraction()
+# operation.getInfo()
+# operation.chooseOperation()
+# operation.showResult()
 
 #---------
