@@ -2,6 +2,7 @@
 
 
 
+
 # Множества
 # l = list((1, 2, 2, 3, 3, 4))
 # s = set(l)
@@ -373,6 +374,40 @@
 # Методы класса для подсчета площади должны быть реализваны с помощью статических методов. 
 # Также класс должен считать количество подсчетов площади и возвращать это значение с помощью статистического метода.
 # НЕ ВЫПОЛНЕНО
+class Geometry:
+    count = 0
+    def __init__(self):
+        self.name = ''
+        self.sideone = ''
+        self.sidetwo = ''
+        self.sidethree = ''
+        self.sidefour = ''
+        self.triangle = int
+        self.square = int
+        self.ask = ''
+        Geometry.count += 1
+    
+    def getInfo(self):
+        self.name = input('Введите геометрическую фигуру: ')
+
+    def operation(self):
+        if self.name == 'Треугольник':
+            self.ask = input('Является ли треугольник прямоугольным? ')
+            if self.ask == 'да':
+             self.sideone = int(input('Введите катет 1: '))
+             self.sidetwo = int(input('Введите катет 2: '))
+             self.sidethree = int(input('Введите катет гипотенузу: '))
+             self.triangle = 0.5 * self.sideone * self.sidetwo
+             print(f'Площадь треугольника равна: {self.triangle}')
+            elif self.ask == 'нет':
+                self.sideone = int(input('Введите высоту: '))
+                self.sidetwo = int(input('Введите основание: '))
+                self.triangle = 0.5 * self.sideone * self.sidetwo
+        elif self.name == 'Квадрат':
+            self.sideone = int(input('Введите сторону: '))
+            self.square = self.sideone * self.sideone
+            print(f'Площадь квадрата равна: {self.square}')
+        
 
 #---------
 
